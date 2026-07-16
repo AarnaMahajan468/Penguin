@@ -1,0 +1,41 @@
+.head
+{
+   font-family:'Times New Roman', 'Times', 'serif';
+}
+
+.main
+{
+    
+    color:aliceblue;
+    background-color:black;
+}
+
+.menu
+{
+  display:flex;
+  color: black;
+  background-color: aliceblue;
+  justify-content: flex-end;
+}
+
+
+ 
+
+.image-right
+{
+    display: flex;
+    justify-content: flex-end;
+    
+}
+
+.image-left
+{
+    display: flex;
+    justify-content: flex-start;
+}
+
+.image-left.image-right
+{
+     flex:1;
+}
+
