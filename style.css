@@ -1,41 +1,58 @@
-.head
-{
-   font-family:'Times New Roman', 'Times', 'serif';
+ /* Cleaned up resets */
+body {
+    margin: 0;
 }
 
-.main
-{
-    
-    color:aliceblue;
-    background-color:black;
+.head {
+   font-family: 'Times New Roman', 'Times', 'serif';
 }
 
-.menu
-{
-  display:flex;
-  color: black;
-  background-color: aliceblue;
+/* Fixed menu display and alignment */
+.menu {
+  color: white;
+  background-color: black;
+  padding: 10px 20px;
+}
+
+.menu ul {
+  display: flex;
   justify-content: flex-end;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 20px;
 }
 
+.menu a {
+  color: white;
+  text-decoration: none;
+}
 
- 
-
-.image-right
-{
+/* Base layout class applied to .main and all <section> tags */
+.section {
     display: flex;
-    justify-content: flex-end;
-    
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px;
+    gap: 40px;
 }
 
-.image-left
-{
-    display: flex;
-    justify-content: flex-start;
+.section div, .section img {
+    flex: 1;
+    max-width: 45%;
 }
 
-.image-left.image-right
-{
-     flex:1;
+/* --- ALTERNATING LOGIC --- */
+
+/* White sections: text left, image right */
+.section:nth-of-type(odd) {
+    background-color: white;
+    color: black;
 }
 
+/* Black sections: flips layout so text is right, image is left */
+.section:nth-of-type(even) {
+    background-color: black;
+    color: white;
+    flex-direction: row-reverse; 
+}
